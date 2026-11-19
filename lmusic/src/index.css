@@ -1,0 +1,125 @@
+/* Tokens de tema. Las etapas siguientes (temas, imagen de fondo) sobrescriben estas variables. */
+:root {
+  --bg: #141316;
+  --bg-rgb: 20, 19, 22;
+  --panel: #1d1b20;
+  --raise: #27242b;
+  --line: #302d35;
+  --text: #f1ece4;
+  --muted: #9a948b;
+  --accent: #f2a93b;
+  --accent-ink: #1a1306;
+  --good: #7fd8c3;
+  --safe-top: max(env(safe-area-inset-top, 0px), 28px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  color-scheme: dark;
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ---------- temas ---------- */
+:root[data-theme='medianoche'] {
+  --bg: #0d1117;
+  --bg-rgb: 13, 17, 23;
+  --panel: #161b24;
+  --raise: #1f2631;
+  --line: #283041;
+  --text: #e6edf6;
+  --muted: #8b97ab;
+  --accent: #5aa9ff;
+  --accent-ink: #04142a;
+  --good: #7fe0c3;
+}
+
+:root[data-theme='neon'] {
+  --bg: #0f0a14;
+  --bg-rgb: 15, 10, 20;
+  --panel: #1a1224;
+  --raise: #251a33;
+  --line: #35254a;
+  --text: #f6eaff;
+  --muted: #a28fb8;
+  --accent: #ff4fa3;
+  --accent-ink: #2a0618;
+  --good: #5ef2d6;
+}
+
+:root[data-theme='bosque'] {
+  --bg: #0e1410;
+  --bg-rgb: 14, 20, 16;
+  --panel: #16201a;
+  --raise: #1f2c24;
+  --line: #2a3b30;
+  --text: #e8f1e6;
+  --muted: #92a596;
+  --accent: #9be15d;
+  --accent-ink: #11200a;
+  --good: #7fd8c3;
+}
+
+:root[data-theme='luz'] {
+  --bg: #f6f2ea;
+  --bg-rgb: 246, 242, 234;
+  --panel: #ffffff;
+  --raise: #ece6da;
+  --line: #ddd5c6;
+  --text: #1d1a16;
+  --muted: #6f685d;
+  --accent: #c26a00;
+  --accent-ink: #fff7ea;
+  --good: #0f8f77;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  overscroll-behavior: none;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
